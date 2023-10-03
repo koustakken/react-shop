@@ -1,0 +1,17 @@
+.root {
+	display: flex;
+	gap: 1rem;
+	width: fit-content;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.active {
+	background-color: #fff;
+	border-radius: 0.3rem;
+	padding: 0.5rem;
+}
+
+.root li {
+	cursor: pointer;
+}
