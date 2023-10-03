@@ -1,0 +1,17 @@
+.root {
+	position: relative;
+}
+
+.root input {
+	padding: 0.5rem;
+	width: 20rem;
+	border: 1px solid #000;
+	border-radius: 3rem;
+}
+
+.root img {
+	position: absolute;
+	width: 20px;
+	right: 0.5rem;
+	top: 0.5rem;
+}

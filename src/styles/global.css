@@ -1,0 +1,31 @@
+body {
+	background: var(--main);
+	font-family: Gabarito, Roboto, sans-serif;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
