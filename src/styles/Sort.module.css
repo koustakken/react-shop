@@ -1,14 +1,13 @@
 .root {
-	background: #fff;
-	align-items: center;
-	margin-top: 1rem;
-	width: fit-content;
-	padding: .4rem;
-	border-radius: .3rem;
+  background: #fff;
+  align-items: center;
+  width: fit-content;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
 }
 
 .label {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

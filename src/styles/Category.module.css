@@ -1,17 +1,16 @@
 .root {
-	display: flex;
-	gap: 1rem;
-	width: fit-content;
-	align-items: center;
-	margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  align-items: center;
 }
 
 .active {
-	background-color: #fff;
-	border-radius: 0.3rem;
-	padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
 }
 
 .root li {
-	cursor: pointer;
+  cursor: pointer;
 }

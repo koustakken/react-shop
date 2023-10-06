@@ -1,0 +1,42 @@
+.wrapper {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  gap: 8px;
+}
+.category {
+  background-color: #1a80b7;
+  color: white;
+  border-radius: 13px;
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+}
+.headerTitle {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.name p {
+  font-weight: 500;
+  font-size: 18px;
+}
+.size {
+  text-align: right;
+}
+.wrapper button {
+  background-color: #fff;
+  border: 1px #000 solid;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
