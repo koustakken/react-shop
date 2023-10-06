@@ -1,6 +1,6 @@
-import styles from '../styles/Input.module.css'
+import styles from './Search.module.css'
 
-const Input = () => {
+const Search = () => {
 	return (
 		<div className={styles.root}>
 			<input type="text" placeholder='Search...' />
@@ -9,4 +9,4 @@ const Input = () => {
 	)
 }
 
-export default Input
+export default Search

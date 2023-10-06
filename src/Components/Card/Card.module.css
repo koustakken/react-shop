@@ -1,42 +1,78 @@
 .wrapper {
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 20px;
-  gap: 8px;
+	width: 306.5px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	background-color: #fff;
+	padding: 20px;
+	gap: 8px;
 }
+
 .category {
-  background-color: #1a80b7;
-  color: white;
-  border-radius: 13px;
-  width: 50px;
-  text-align: center;
-  padding: 5px;
+	background-color: #1a80b7;
+	color: white;
+	border-radius: 13px;
+	width: 50px;
+	text-align: center;
+	padding: 5px;
+	cursor: default;
 }
+
+.headerTitle img {
+	cursor: pointer;
+}
+
+.fav path {
+	fill: var(--main);
+}
+
 .headerTitle {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
+
 .name p {
-  font-weight: 500;
-  font-size: 18px;
+	font-weight: 500;
+	font-size: 18px;
 }
+
 .size {
-  text-align: right;
+	text-align: right;
 }
+
 .wrapper button {
-  background-color: #fff;
-  border: 1px #000 solid;
-  border-radius: 25px;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
+	background-color: #fff;
+	border: 1px #000 solid;
+	border-radius: 25px;
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 100%;
+	transition: all ease-in-out .3s;
+}
+
+.wrapper button:hover {
+	background-color: var(--main);
+	border: 1px var(--main) solid;
+	color: #fff;
+}
+
+.wrapper button:active {
+	background-color: var(--second);
+	border: 1px var(--second) solid;
+	color: #000;
+}
+
+.added button {
+	background-color: var(--main);
+	border: 1px var(--main) solid;
+	border-radius: 25px;
+	color: #fff;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../styles/Sort.module.css'
+import styles from './Sort.module.css'
 
 const Sort = () => {
 	const sortRef = React.useRef();
