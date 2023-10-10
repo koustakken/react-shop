@@ -1,8 +1,5 @@
-import Header from "../Header";
-import Category from "../Category";
-import Sort from "../Sort";
-import Card from "../Card";
-import CardContainer from '../CardContainer';
+import AppRouter from '../Routes'
+import Header from '../Header'
 
 import styles from "./App.module.css";
 
@@ -10,20 +7,7 @@ function App() {
 	return (
 		<div className={styles.app}>
 			<Header />
-			<div className={styles.top}>
-				<Category />
-				<Sort />
-			</div>
-			<CardContainer>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-			</CardContainer>
+			<AppRouter />
 		</div>
 	);
 }

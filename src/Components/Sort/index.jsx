@@ -1,45 +1,31 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getSort } from '../../features/sort/sortSlice'
 
 import styles from './Sort.module.css'
 
 const Sort = () => {
-	const sortRef = React.useRef();
+	const dispatch = useDispatch()
+	const { sort } = useSelector(({ sort }) => sort)
+	const [active, setActive] = React.useState(0)
 
-	const sorts = [
-		{ name: 'популярности', sortProperty: 'rating' },
-		{ name: 'цене', sortProperty: 'price' },
-		{ name: 'алфавиту', sortProperty: 'title' },
-	]
-
-	const [sort, setSort] = React.useState({ name: 'популярности', sortProperty: 'rating' })
-
-	const [open, setOpen] = React.useState(false);
-
-	const onClickPopup = () => {
-		setOpen(!open);
-	};
-
+	React.useEffect(() => {
+		dispatch(getSort())
+	}, [dispatch])
+	console.log(sort)
 	return (
-		<div ref={sortRef} className={styles.root}>
-			<div className={styles.label}>
-				<p>Сортировка по:</p>
-				<span onClick={() => onClickPopup()}>{sort.name}</span>
-			</div>
-			{open && (
-				<div className={styles.popup}>
-					<ul onClick={() => onClickPopup()}>
-						{sorts.map((obj, i) => (
-							<li
-								key={i}
-								onClick={() => setSort(obj)}
-								className={sort.sortProperty === obj.sortProperty ? 'active' : ''}
-							>
-								{obj.name}
-							</li>
-						))}
-					</ul>
-				</div>
-			)}
+		<div className={styles.root}>
+			<ul>
+				{sort.map((obj) => (
+					<li
+						key={obj.id}
+						onClick={() => setActive(obj.id)}
+						className={obj.id === active ? styles.active : ''}
+					>
+						{obj.name}
+					</li>
+				))}
+			</ul>
 		</div>
 	)
 }

@@ -1,19 +1,26 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { getCategories } from '../../features/categories/categoriesSlice';
 import styles from './Category.module.css'
 
 const Category = () => {
 
-	const categories = ['Man', 'Women', 'Children'];
+	const dispatch = useDispatch();
+	const { categories } = useSelector(({ categories }) => categories)
 	const [active, setActive] = React.useState(0)
+
+	React.useEffect(() => {
+		dispatch(getCategories())
+	}, [dispatch])
 
 	return (
 		<ul className={styles.root}>
-			{categories.map((name, i) => <li
-				key={i}
-				className={i === active ? styles.active : ''}
-				onClick={() => setActive(i)}
+			{categories.map((obj) => <li
+				key={obj.id}
+				className={obj.id === active ? styles.active : ''}
+				onClick={() => setActive(obj.id)}
 			>
-				{name}
+				{obj.name}
 			</li>)}
 		</ul>
 	)
