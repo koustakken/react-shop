@@ -24,7 +24,7 @@ const Card = () => {
 						alt="heart" width={24}
 					/>
 				</div>
-				<img src="src\assets\leon.jpg" alt="" srcset="" />
+				<img src="src\assets\leon.jpg" alt="item" />
 				<div className={styles.container}>
 					<div className={styles.name}>
 						<p>LEON BRAWL STARS</p>

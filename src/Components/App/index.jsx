@@ -10,8 +10,10 @@ function App() {
 	return (
 		<div className={styles.app}>
 			<Header />
-			<Category />
-			<Sort />
+			<div className={styles.top}>
+				<Category />
+				<Sort />
+			</div>
 			<CardContainer>
 				<Card />
 				<Card />
