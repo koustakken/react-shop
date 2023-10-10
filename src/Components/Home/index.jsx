@@ -17,7 +17,20 @@ const Home = () => {
 
 	const sortType = useSelector((state) => state.sort.active)
 	const categoryType = useSelector((state) => state.categories.active)
-
+	// придумать фильтрацию
+	function sortFilter(item) {
+		switch (sortType) {
+			case 0:
+				console.log(2)
+				break
+			case 1:
+				console.log(2)
+				break
+			case 2:
+				console.log(3)
+				break
+		}
+	}
 	return (
 		<>
 			<div className={styles.top}>
@@ -26,7 +39,7 @@ const Home = () => {
 			</div>
 			{`категория: ${categoryType}, сортировка: ${sortType}`}
 			<CardContainer>
-				{products.map((obj) =>
+				{products.filter(sortFilter).map((obj) =>
 					<Card
 						key={obj.id}
 						title={obj.title}
