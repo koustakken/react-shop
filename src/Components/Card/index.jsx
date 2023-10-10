@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-const Card = () => {
+const Card = ({ title, price, imageUrl, sizes }) => {
 	const [isFavorite, favoriteToggle] = React.useState(false);
 	const [isAdded, addedToggle] = React.useState(false);
 
@@ -12,6 +12,8 @@ const Card = () => {
 	const onClickAdd = () => {
 		addedToggle(!isAdded);
 	}
+
+	const [active, setActive] = React.useState(0)
 
 	return (
 		<div className={styles.root}>
@@ -24,19 +26,24 @@ const Card = () => {
 						alt="heart" width={24}
 					/>
 				</div>
-				<img src="src\assets\leon.jpg" alt="item" />
+				<img src={imageUrl} alt="item" />
 				<div className={styles.container}>
 					<div className={styles.name}>
-						<p>LEON BRAWL STARS</p>
-						<p>T-SHIRT</p>
+						<p>{title}</p>
 					</div>
 					<div className={styles.size}>
-						<p>SIZE</p>
-						<p>S, M, L, XL</p>
+						{sizes.map((size, i) =>
+							<p
+								key={i}
+								className={i === active ? styles.active : ''}
+								onClick={() => setActive(i)}
+							>
+								{size}
+							</p>)}
 					</div>
 				</div>
 				<div className={isAdded ? styles.added : ''}>
-					<button onClick={onClickAdd}>{isAdded ? 'Added' : '$129,99'}</button>
+					<button onClick={onClickAdd}>{isAdded ? 'Added' : price + '$'}</button>
 				</div>
 			</div>
 		</div>

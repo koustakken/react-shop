@@ -12,7 +12,6 @@ const Sort = () => {
 	React.useEffect(() => {
 		dispatch(getSort())
 	}, [dispatch])
-	console.log(sort)
 	return (
 		<div className={styles.root}>
 			<ul>
