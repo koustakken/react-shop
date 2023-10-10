@@ -15,12 +15,18 @@ export const getSort = createAsyncThunk(
 )
 
 const initialState = {
-	sort: []
+	sort: [],
+	active: 0
 }
 
 const sortSlice = createSlice({
 	name: 'sort',
 	initialState,
+	reducers: {
+		setActiveSort(state, action) {
+			state.active = action.payload
+		}
+	},
 	extraReducers: (builder) => {
 		builder.addCase(getSort.fulfilled, (state, action) => {
 			state.sort = action.payload
@@ -28,4 +34,5 @@ const sortSlice = createSlice({
 	}
 })
 
+export const { setActiveSort } = sortSlice.actions;
 export default sortSlice.reducer

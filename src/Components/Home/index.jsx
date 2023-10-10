@@ -4,24 +4,27 @@ import Sort from '../Sort'
 import CardContainer from '../CardContainer'
 import Card from '../Card'
 
-import { useDispatch, useSelector } from 'react-redux'
-
 import styles from './Home.module.css'
-import { getProducts } from '../../features/products/productsSlice'
+
+import { useDispatch, useSelector } from 'react-redux'
 
 const Home = () => {
 	const dispatch = useDispatch()
-	const { products } = useSelector(({ products }) => products)
 
-	React.useEffect(() => {
-		dispatch(getProducts())
-	}, [dispatch])
+	const { products } = useSelector(({ products }) => products)
+	const { sort } = useSelector(({ sort }) => sort)
+	const { categories } = useSelector(({ categories }) => categories)
+
+	const sortType = useSelector((state) => state.sort.active)
+	const categoryType = useSelector((state) => state.categories.active)
+
 	return (
 		<>
 			<div className={styles.top}>
-				<Category />
-				<Sort />
+				<Category categories={categories} />
+				<Sort sort={sort} />
 			</div>
+			{`категория: ${categoryType}, сортировка: ${sortType}`}
 			<CardContainer>
 				{products.map((obj) =>
 					<Card

@@ -15,17 +15,23 @@ export const getCategories = createAsyncThunk(
 )
 
 const initialState = {
-	categories: []
+	categories: [],
+	active: 0
 }
 
 const categoriesSlice = createSlice({
 	name: 'categories',
 	initialState,
+	reducers: {
+		setActiveCategory(state, action) {
+			state.active = action.payload
+		}
+	},
 	extraReducers: (builder) => {
 		builder.addCase(getCategories.fulfilled, (state, action) => {
 			state.categories = action.payload
 		})
 	}
 })
-
+export const { setActiveCategory } = categoriesSlice.actions
 export default categoriesSlice.reducer

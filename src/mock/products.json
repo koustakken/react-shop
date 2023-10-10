@@ -10,5 +10,27 @@
 			"L"
 		],
 		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 2,
+		"title": "Male glasses",
+		"price": 100,
+		"rating": 4,
+		"category": 0,
+		"sizes": [],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 3,
+		"title": "Male jacket",
+		"price": 500,
+		"rating": 3,
+		"category": 0,
+		"sizes": [
+			"M",
+			"L",
+			"XL"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
 	}
 ]
