@@ -12,7 +12,7 @@
 	background-color: #1a80b7;
 	color: white;
 	border-radius: 13px;
-	width: 50px;
+	width: fit-content;
 	text-align: center;
 	padding: 5px;
 	cursor: default;

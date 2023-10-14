@@ -3,29 +3,24 @@ import Category from '../Category'
 import Sort from '../Sort'
 import CardContainer from '../CardContainer'
 import Card from '../Card'
+import Slider from '../Slider'
 
 import styles from './Home.module.css'
 
 import { useSelector } from 'react-redux'
 
 const Home = () => {
+	const { currentProducts } = useSelector(({ products }) => products)
 
-	const { products } = useSelector(({ products }) => products)
-	const { sort } = useSelector(({ sort }) => sort)
-	const { categories } = useSelector(({ categories }) => categories)
-
-	const sortType = useSelector((state) => state.sort.active)
-	const categoryType = useSelector((state) => state.categories.active)
-	// придумать фильтрацию
 	return (
 		<>
+			<Slider />
 			<div className={styles.top}>
-				<Category categories={categories} />
-				<Sort sort={sort} />
+				<Category />
+				<Sort />
 			</div>
-			{`категория: ${categoryType}, сортировка: ${sortType}`}
 			<CardContainer>
-				{products.map((obj) =>
+				{currentProducts.map((obj) =>
 					<Card
 						key={obj.id}
 						title={obj.title}

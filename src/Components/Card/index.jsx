@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-const Card = ({ title, price, imageUrl, sizes }) => {
+const Card = ({ title, price, imageUrl, sizes, category }) => {
 	const [isFavorite, favoriteToggle] = React.useState(false);
 	const [isAdded, addedToggle] = React.useState(false);
 
@@ -19,7 +19,7 @@ const Card = ({ title, price, imageUrl, sizes }) => {
 		<div className={styles.root}>
 			<div className={styles.wrapper}>
 				<div className={styles.headerTitle}>
-					<div className={styles.category}>MEN</div>
+					<div className={styles.category}>{category.name}</div>
 					<img
 						src={isFavorite ? "src/assets/heart-solid.svg" : "src/assets/heart-regular.svg"}
 						onClick={onClickFav}
