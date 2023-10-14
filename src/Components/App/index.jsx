@@ -1,29 +1,22 @@
-import Header from "../Header";
-import Category from "../Category";
-import Sort from "../Sort";
-import Card from "../Card";
-import CardContainer from '../CardContainer';
+import React from 'react';
+import AppRouter from '../Routes'
+import Header from '../Header'
 
 import styles from "./App.module.css";
 
+import { getProducts } from '../../features/products/productsSlice'
+import { useDispatch } from 'react-redux';
+
 function App() {
+	const dispatch = useDispatch()
+	React.useEffect(() => {
+		dispatch(getProducts())
+	}, [])
+
 	return (
 		<div className={styles.app}>
 			<Header />
-			<div className={styles.top}>
-				<Category />
-				<Sort />
-			</div>
-			<CardContainer>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-				<Card />
-			</CardContainer>
+			<AppRouter />
 		</div>
 	);
 }

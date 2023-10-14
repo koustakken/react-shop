@@ -1,0 +1,94 @@
+[
+	{
+		"id": 0,
+		"title": "A Name Category Man rating 5",
+		"price": 300,
+		"rating": 5,
+		"category": {
+			"id": 0,
+			"name": "MAN"
+		},
+		"sizes": [
+			"M",
+			"L"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 2,
+		"title": "B Name Category Women rating 4",
+		"price": 100,
+		"rating": 4,
+		"category": {
+			"id": 1,
+			"name": "WOMEN"
+		},
+		"sizes": [
+			"XS",
+			"S"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 3,
+		"title": "C Name Category Children rating 10",
+		"price": 500,
+		"rating": 10,
+		"category": {
+			"id": 2,
+			"name": "CHILDREN"
+		},
+		"sizes": [
+			"M",
+			"L",
+			"XL"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 4,
+		"title": "D Name Category Man rating 0",
+		"price": 250,
+		"rating": 0,
+		"category": {
+			"id": 0,
+			"name": "MAN"
+		},
+		"sizes": [
+			"M",
+			"L"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 5,
+		"title": "E Name Category Women rating 1",
+		"price": 400,
+		"rating": 1,
+		"category": {
+			"id": 1,
+			"name": "WOMEN"
+		},
+		"sizes": [
+			"XS",
+			"S"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	},
+	{
+		"id": 6,
+		"title": "F Name Category Children rating 3",
+		"price": 950,
+		"rating": 3,
+		"category": {
+			"id": 2,
+			"name": "CHILDREN"
+		},
+		"sizes": [
+			"M",
+			"L",
+			"XL"
+		],
+		"imageUrl": "https://images.unsplash.com/photo-1641932156899-a9a319476799?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1928&q=80"
+	}
+]

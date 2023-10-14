@@ -12,7 +12,7 @@
 	background-color: #1a80b7;
 	color: white;
 	border-radius: 13px;
-	width: 50px;
+	width: fit-content;
 	text-align: center;
 	padding: 5px;
 	cursor: default;
@@ -44,6 +44,30 @@
 
 .size {
 	text-align: right;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.size p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+	background-color: #f3f3f3;
+	padding: .3rem;
+	cursor: pointer;
+	border-radius: .3rem;
+	width: 30px;
+	height: 30px;
+}
+
+.active {
+	border: 1px solid var(--main)
+}
+
+.size p:hover {
+	background-color: #fff;
 }
 
 .wrapper button {

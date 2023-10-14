@@ -1,20 +1,18 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { filterByCategoryMan, filterByCategoryWomen, filterByCategoryChildren, filterReset } from '../../features/products/productsSlice'
+
 import styles from './Category.module.css'
 
 const Category = () => {
-
-	const categories = ['Man', 'Women', 'Children'];
-	const [active, setActive] = React.useState(0)
+	const dispatch = useDispatch()
 
 	return (
 		<ul className={styles.root}>
-			{categories.map((name, i) => <li
-				key={i}
-				className={i === active ? styles.active : ''}
-				onClick={() => setActive(i)}
-			>
-				{name}
-			</li>)}
+			<li onClick={() => dispatch(filterReset())}>ALL</li>
+			<li onClick={() => { dispatch(filterByCategoryMan()) }}>MAN</li>
+			<li onClick={() => { dispatch(filterByCategoryWomen()) }}>WOMEN</li>
+			<li onClick={() => { dispatch(filterByCategoryChildren()) }}>CHILDREN</li>
 		</ul>
 	)
 }
